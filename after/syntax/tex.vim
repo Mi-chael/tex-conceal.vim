@@ -2,7 +2,7 @@
 
 if has('conceal')
   " more reasonably sized symbols that were already defined
-  syn match texMathSymbol '\\Rightarrow\>' contained conceal cchar==>
+  " syn match texMathSymbol '\\Rightarrow\>' contained conceal cchar==>
   syn match texMathSymbol '\\Leftarrow\>' contained conceal cchar=<=
   syn match texMathSymbol '\\rightarrow\>' contained conceal cchar=->
   syn match texMathSymbol '\\leftarrow\>' contained conceal cchar=<-
