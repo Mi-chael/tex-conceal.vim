@@ -1,33 +1,17 @@
 " Original file is https://github.com/wjakob/wjakob.vim/blob/master/after/syntax/tex.vim
 
 if has('conceal')
-  " More paper specific (what to do with these??)
-  syn match texMathSymbol '\\pathspace' contained conceal cchar=Ω
-  syn match texMathSymbol '\\surfaces' contained conceal cchar=𝓜
-
   " more reasonably sized symbols that were already defined
-  syn match texMathSymbol '\\Rightarrow\>' contained conceal cchar=⇒
-  syn match texMathSymbol '\\Leftarrow\>' contained conceal cchar=⇐
-  syn match texMathSymbol '\\rightarrow\>' contained conceal cchar=→
-  syn match texMathSymbol '\\leftarrow\>' contained conceal cchar=←
+  syn match texMathSymbol '\\Rightarrow\>' contained conceal cchar==>
+  syn match texMathSymbol '\\Leftarrow\>' contained conceal cchar=<=
+  syn match texMathSymbol '\\rightarrow\>' contained conceal cchar=->
+  syn match texMathSymbol '\\leftarrow\>' contained conceal cchar=<-
   syn match texMathSymbol '\\emptyset\>' contained conceal cchar=Ø
   syn match texMathSymbol '\\varphi\>' contained conceal cchar=φ
   syn match texMathSymbol '\\phi\>' contained conceal cchar=Φ
   syn match texMathSymbol '\\langle\>\s*' contained conceal cchar=⟨
   syn match texMathSymbol '\s*\\rangle\>' contained conceal cchar=⟩
-  syn match texMathSymbol '\\\\' contained conceal cchar=⏎
-
-  " Simple number super/sub-scripts
-  syn match texMathSymbol '\^0' contained conceal cchar=⁰
-  syn match texMathSymbol '\^1' contained conceal cchar=¹
-  syn match texMathSymbol '\^2' contained conceal cchar=²
-  syn match texMathSymbol '\^3' contained conceal cchar=³
-  syn match texMathSymbol '\^4' contained conceal cchar=⁴
-  syn match texMathSymbol '\^5' contained conceal cchar=⁵
-  syn match texMathSymbol '\^6' contained conceal cchar=⁶
-  syn match texMathSymbol '\^7' contained conceal cchar=⁷
-  syn match texMathSymbol '\^8' contained conceal cchar=⁸
-  syn match texMathSymbol '\^9' contained conceal cchar=⁹
+  " syn match texMathSymbol '\\\\' contained conceal cchar=⏎
 
   syn match texMathSymbol '\^{-1}' contained conceal contains=texSuperscripts
   syn match texMathSymbol '\^\\mathrm{T}' contained conceal contains=texSuperscripts
@@ -35,21 +19,6 @@ if has('conceal')
   syn match texSuperscripts '1' contained conceal cchar=¹
   syn match texSuperscripts '-' contained conceal cchar=⁻
   syn match texSuperscripts 'T' contained conceal cchar=ᵀ
-
-  syn match texMathSymbol '_0' contained conceal cchar=₀
-  syn match texMathSymbol '_1' contained conceal cchar=₁
-  syn match texMathSymbol '_2' contained conceal cchar=₂
-  syn match texMathSymbol '_3' contained conceal cchar=₃
-  syn match texMathSymbol '_4' contained conceal cchar=₄
-  syn match texMathSymbol '_5' contained conceal cchar=₅
-  syn match texMathSymbol '_6' contained conceal cchar=₆
-  syn match texMathSymbol '_7' contained conceal cchar=₇
-  syn match texMathSymbol '_8' contained conceal cchar=₈
-  syn match texMathSymbol '_9' contained conceal cchar=₉
-  syn match texMathSymbol '_i' contained conceal cchar=ᵢ
-  syn match texMathSymbol '^i' contained conceal cchar=ⁱ
-  syn match texMathSymbol '_o' contained conceal cchar=ₒ
-  syn match texMathSymbol '^o' contained conceal cchar=ᵒ
 
   " logical symbols
   syn match texMathSymbol '\\lor\>' contained conceal cchar=∨
