@@ -2,10 +2,12 @@
 
 if has('conceal')
   " more reasonably sized symbols that were already defined
-  " syn match texMathSymbol '\\Rightarrow\>' contained conceal cchar==>
-  syn match texMathSymbol '\\Leftarrow\>' contained conceal cchar=<=
-  syn match texMathSymbol '\\rightarrow\>' contained conceal cchar=->
-  syn match texMathSymbol '\\leftarrow\>' contained conceal cchar=<-
+  syn match TexMathSymbol "\\Right\%(arrow\>\)\@=" contained conceal cchar==
+  syn match TexMathSymbol "\%(\\Right\)\@<=arrow\>" contained conceal cchar=>
+  
+  syn match TexMathSymbol "\\Left\%(arrow\>\)\@=" contained conceal cchar=<
+  syn match TexMathSymbol "\%(\\Left\)\@<=arrow\>" contained conceal cchar==
+
   syn match texMathSymbol '\\emptyset\>' contained conceal cchar=Ø
   syn match texMathSymbol '\\varphi\>' contained conceal cchar=φ
   syn match texMathSymbol '\\phi\>' contained conceal cchar=Φ
